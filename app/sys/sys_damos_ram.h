@@ -16,18 +16,9 @@
 
 /* Includes ----------------------------------------------------------- */
 #include <stdint.h>
-#include "sys_can.h"
+
 
 /* Public defines ----------------------------------------------------- */
-// Can Rx message structe
-extern sys_can_msg_rx_set_device_id_confirm_t g_can_msg_device_id_confirm;
-extern sys_can_msg_rx_encoder_value_t g_can_msg_encoder_value;
-
-// Can Tx message structe
-extern sys_can_msg_tx_set_device_id_t g_can_msg_set_device_id;
-extern sys_can_msg_tx_command_t g_can_msg_command;
-extern sys_can_msg_tx_request_sensor_value_t g_can_msg_request_sensor_value;
-
 /* Public enumerate/structure ----------------------------------------- */
 /* Public macros ------------------------------------------------------ */
 /* Public variables --------------------------------------------------- */

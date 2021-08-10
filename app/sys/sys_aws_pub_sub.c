@@ -13,7 +13,6 @@
 /* Includes ----------------------------------------------------------------- */
 #include "sys_aws_pub_sub.h"
 #include "sys_aws_config.h"
-#include "sys_json.h"
 #include "sys_nvs.h"
 
 #include "platform_common.h"
@@ -110,8 +109,6 @@ bool m_sys_aws_publish(void)
   char buf[1000] = "";
 
   // Create json format
-  sys_json_create(buf, SYS_JSON_SEND_ENCODE_DATA);
-
   m_params_publish_msg.payload    = (void *)buf;
   m_params_publish_msg.payloadLen = strlen(buf);
 

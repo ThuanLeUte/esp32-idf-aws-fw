@@ -25,43 +25,17 @@ static const char *TAG = "BSP";
 /* Private function prototypes ---------------------------------------------- */
 static inline void m_bsp_nvs_init(void);
 static inline void m_bsp_spiffs_init(void);
-static inline void m_bsp_uart_init(void);
 
 /* Function definitions ----------------------------------------------------- */
 void bsp_init(void)
 {
   m_bsp_nvs_init();
   m_bsp_spiffs_init();
-  m_bsp_uart_init(); 
 }
 
-int bsp_uart_write(const char *data, uint16_t len)
-{
-  return uart_write_bytes(UART_NUM_1, data, len);
-}
-
-int bsp_uart_read(char *data)
-{
-  return uart_read_bytes(UART_NUM_1, (uint8_t *)data, RX_BUF_SIZE, pdMS_TO_TICKS(100));
-}
 
 /* Private function --------------------------------------------------------- */
-static inline void m_bsp_uart_init(void)
-{
-  const uart_config_t uart_config = {
-      .baud_rate  = 115200,
-      .data_bits  = UART_DATA_8_BITS,
-      .parity     = UART_PARITY_DISABLE,
-      .stop_bits  = UART_STOP_BITS_1,
-      .flow_ctrl  = UART_HW_FLOWCTRL_DISABLE,
-      .source_clk = UART_SCLK_APB,
-  };
 
-  // We won't use a buffer for sending data.
-  uart_driver_install(UART_NUM_1, RX_BUF_SIZE * 2, 0, 0, NULL, 0);
-  uart_param_config(UART_NUM_1, &uart_config);
-  uart_set_pin(UART_NUM_1, TXD_PIN, RXD_PIN, UART_PIN_NO_CHANGE, UART_PIN_NO_CHANGE);
-}
 
 static inline void m_bsp_nvs_init(void)
 {

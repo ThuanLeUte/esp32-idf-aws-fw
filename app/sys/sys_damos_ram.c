@@ -17,15 +17,6 @@
 /* Private enumerate/structure ---------------------------------------- */
 /* Private macros ----------------------------------------------------- */
 /* Public variables --------------------------------------------------- */
-// Can Rx message structe
-sys_can_msg_rx_set_device_id_confirm_t g_can_msg_device_id_confirm;
-sys_can_msg_rx_encoder_value_t g_can_msg_encoder_value;
-
-// Can Tx message structe
-sys_can_msg_tx_set_device_id_t g_can_msg_set_device_id;
-sys_can_msg_tx_command_t g_can_msg_command;
-sys_can_msg_tx_request_sensor_value_t g_can_msg_request_sensor_value;
-
 /* Private variables -------------------------------------------------- */
 /* Private function prototypes ---------------------------------------- */
 /* Function definitions ----------------------------------------------- */

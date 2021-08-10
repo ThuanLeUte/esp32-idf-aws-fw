@@ -15,9 +15,6 @@
 #include "bsp.h"
 #include "sys_aws_pub_sub.h"
 #include "sys_ota.h"
-#include "sys_can.h"
-#include "sys_transmiter.h"
-#include "sys_mqtt.h"
 
 /* Private defines ---------------------------------------------------------- */
 #define EXAMPLE_ESP_WIFI_SSID "A06.11"
@@ -49,18 +46,12 @@ void sys_boot(void)
 
   m_wifi_init_sta();
 
-  sys_mqtt_start(MQTT_BROKER_URI);
-
   // sys_ota_start(OTA_LINK);
-
-  can_driver_init();
-  sys_transmiter_init();
 }
 
 void sys_run(void)
 {
   vTaskDelay(pdMS_TO_TICKS(100));
-  sys_can_receive_msg();
 }
 
 /* Private function --------------------------------------------------------- */

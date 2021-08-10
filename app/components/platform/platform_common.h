@@ -44,8 +44,6 @@ extern "C" {
 #include "esp_event.h"
 #include "nvs_flash.h"
 #include "esp_spiffs.h"
-#include "driver/can.h"
-#include "driver/uart.h"
 
 /* Public defines ----------------------------------------------------- */
 /* Public enumerate/structure ----------------------------------------------- */
