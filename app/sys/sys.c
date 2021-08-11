@@ -14,7 +14,6 @@
 #include "platform_common.h"
 #include "bsp.h"
 #include "sys_aws_pub_sub.h"
-#include "sys_ota.h"
 
 /* Private defines ---------------------------------------------------------- */
 #define EXAMPLE_ESP_WIFI_SSID "A06.11"
