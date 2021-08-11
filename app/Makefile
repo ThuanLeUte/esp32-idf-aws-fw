@@ -3,7 +3,7 @@
 # project subdirectory.
 #
 
-PROJECT_NAME := task-3-can-bus-iot-device_fw
+PROJECT_NAME := esp32-idf-aws-fw
 PROJECT_VER  := v1.0.0
 
 EXTRA_COMPONENT_DIRS += $(PROJECT_PATH)/sys/
